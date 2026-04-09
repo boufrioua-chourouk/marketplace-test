@@ -79,7 +79,7 @@
 
     /* ── HERO ── */
     .hero {
-      background: #ff0000;
+      background: url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1600&q=80') center/cover no-repeat;
       color: #fff; text-align: center;
       padding: 6rem 2rem 5rem;
       position: relative; overflow: hidden;
@@ -87,23 +87,26 @@
     .hero::before {
       content: '';
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 50% 100%, rgba(99,102,241,.25) 0%, transparent 70%);
+      background: linear-gradient(135deg, rgba(15,15,30,.82) 0%, rgba(30,20,60,.75) 60%, rgba(10,10,25,.88) 100%);
+      backdrop-filter: blur(2px);
     }
     .hero-content { position: relative; max-width: 700px; margin: 0 auto; }
     .hero-badge {
-      display: inline-block; background: rgba(99,102,241,.2);
-      border: 1px solid rgba(99,102,241,.4);
-      color: #a5b4fc; border-radius: 50px;
+      display: inline-block; background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.25);
+      color: #e2e8f0; border-radius: 50px;
       padding: .3rem 1rem; font-size: .82rem; font-weight: 600;
       letter-spacing: .05em; text-transform: uppercase;
       margin-bottom: 1.25rem;
+      backdrop-filter: blur(6px);
     }
     .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: 800; line-height: 1.15;
-      letter-spacing: -1px; margin-bottom: 1rem;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 900; line-height: 1.1;
+      letter-spacing: -2px; margin-bottom: 1rem;
+      text-shadow: 0 2px 20px rgba(0,0,0,.4);
     }
-    .hero h1 span { color: #a5b4fc; }
+    .hero h1 span { color: inherit; }
     .hero p { font-size: 1.1rem; color: #cbd5e1; max-width: 500px; margin: 0 auto 2rem; line-height: 1.7; }
     .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
     .btn-primary {
@@ -306,11 +309,10 @@
 <section class="hero">
   <div class="hero-content">
     <div class="hero-badge">&#127775; New arrivals every day</div>
-    <h1>Discover Products<br>You'll <span>Actually Love</span></h1>
+    <h1>Discover Products You'll Actually Love</h1>
     <p>Thousands of curated products from trusted sellers — delivered fast to your door.</p>
     <div class="hero-cta">
-      <a href="#products" class="btn-primary">Shop Now</a>
-      <a href="#categories" class="btn-outline">Browse Categories</a>
+      <a href="#categories" class="btn-primary">Browse Categories</a>
     </div>
     <div class="hero-stats">
       <div class="hero-stat"><div class="num">50K+</div><div class="lbl">Products</div></div>
